@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+div {
+font-family: arial, sans-serif;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+</style>
+</head>
+<div style="align: center"><b>Time - Clock</b></div>
+<div style="height: 500px; overflow: auto; display: flex; flex-direction: column-reverse;">
+<table>
+<thead>
+  <tr>
+     <th>Time - Clock
+    </th>
+    </tr>
+</thead>
+<tbody >
+  <tr *ngFor="let message of kafkaMessages$ | async">
+    <td align="center" style="">{{message}}</td>    
+  </tr>
+</tbody>     </table>    </div>
+ 
